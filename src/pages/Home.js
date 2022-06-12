@@ -8,7 +8,7 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-     todo:[]
+     todos:[]
     };
   }
   // the addTodo function simply creates a new array that includes the user submitted todo item and then
@@ -21,7 +21,7 @@ class Home extends Component {
     // dealing with a larger data sensitive project.
     todo.id = Math.random();
     // An array that contains the current array and the new todo item
-    let new_list = [...this.state.todo, todo];
+    let new_list = [...this.state.todos, todo];
     // Updates the local state with the new array.
     this.setState({
       todos: new_list,
@@ -31,7 +31,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Todo's </h1>
-        <Todos todos={this.state.todo} />
+        <Todos todos={this.state.todos} />
         <AddTodo addTodo={this.addTodo} />
       </div>
     );

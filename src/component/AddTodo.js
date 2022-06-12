@@ -46,7 +46,7 @@ class AddTodo extends Component {
       />
       <Button
         style={{ marginLeft: "10px" }}
-        onClick={this.handleChange}
+        onClick={this.handleSubmit}
         variant="contained"
         color="primary"
       >
