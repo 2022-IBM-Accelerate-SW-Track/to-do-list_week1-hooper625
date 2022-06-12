@@ -34,6 +34,7 @@ export default class NavbarComp extends Component {
                 <Route exact path="/about" element={<About/>}/>
                 </Routes>
             </div>
+            <NavDropdown></NavDropdown>
             </Router>
         )
     }
