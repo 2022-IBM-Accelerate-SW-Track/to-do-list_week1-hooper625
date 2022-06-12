@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Todos from '../component/todos';
-import AddTodo from '../component/AddTodo';
+import Todos from '../component/todos.js';
+import AddTodo from '../component/AddTodo.js';
 import '../pages/Home.css';
   
 class Home extends Component {
@@ -21,7 +21,7 @@ class Home extends Component {
     // dealing with a larger data sensitive project.
     todo.id = Math.random();
     // An array that contains the current array and the new todo item
-    let new_list = [...this.state.todos, todo];
+    let new_list = [...this.state.todo, todo];
     // Updates the local state with the new array.
     this.setState({
       todos: new_list,
@@ -31,7 +31,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Todo's </h1>
-        <Todos todos={this.state.todo}/>
+        <Todos todos={this.state.todo} />
         <AddTodo addTodo={this.addTodo} />
       </div>
     );
